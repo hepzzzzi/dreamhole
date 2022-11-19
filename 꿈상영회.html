@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <title>꿈 상영회</title>
+      <meta charset="utf-8"> 
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400&display=swap" rel="stylesheet">
+      
+      <style>
+         *{font-family: 'Noto Serif KR', serif;}
+         .csMsg1 { border-radius: 0px 20px 0px 20px; margin: 5px; color:white; background-color: #2EB966;}
+         .csMsg2 {border:dotted 3px;  margin: 5px; blue; color:blue;background:pink;}
+
+         #animate
+            {position: absolute;
+            top: 100px;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            animation: move 5s ease infinite;}
+            
+         #animate2
+            {position: absolute;
+            top: 100px;
+            right: 450px;
+            width: 100px;
+            height: 100px;
+            animation: move 10s ease infinite;}
+         
+         #animate3
+            {position: absolute;
+            color:#ffbe92ef;
+            top: 100px;
+            right: 450px;
+            width: 100px;
+            height: 100px;
+            animation: move 2s ease infinite;}
+            
+            
+         @keyframes move 
+            {50% {transform: translate(100px, 100px);} }
+      
+         
+
+      </style>
+ 
+   </head> 
+   <body>
+      <div id="animate"> <img src="images/gosari.png" alt=""></div>
+      <div id="animate2"> <img src="images/gosari2.png" alt=""></div>
+      <span id="animate3">Ppiyong!</span>
+
+      <div style="text-align: center; margin-top:330px; line-height: 35px;">
+         마법학교에 들어간다.<BR>
+         <span id="idMsg21" class="csMsg2"></span>은(는) 비행 연습을 하고 있고, 나도 비행연습을 하기위해 비행용 빗자루를 찾아다닌다.<BR>
+         그때 <span id="idMsg22"class="csMsg2"></span>은(는) <span id="idMsg11" class="csMsg1"></span>을(를) 타고 날아다니고 있다.<BR>
+         나의 비행도구도 <span id="idMsg12" class="csMsg1"></span>이다.<BR>
+         뭔가 이상하다 싶으면서도 승차감이 너무 좋고 효율적이어서 요즘엔 이게 핫 아이템이구나, 하고 열심히 비행연습을 한다.<BR>
+         그때 <span id="idMsg23" class="csMsg2"></span>은(는) 나에게 갑자기 마법 전쟁에 나가란 말을 한다.<BR>
+         사실 난 아직 비행을 잘 하지 못하는데… 어떻게 해야 하는지 물어봄과 동시에 이미 나는 전쟁에 출전해 있고<BR>
+         날지는 못하지만,부지런해지기 마법은 할 줄 알아서 점프하고 마법 쏘고 점프하고 마법을 쏜다. <BR>
+      </div>
+
+      <div  style=" margin-top:100px; text-align:center;">
+         <a href="삼차원공간.html" style="position: absolute;"> 
+            <strong>
+               [!!]
+            </strong>
+         </a>
+      </div>
+      
+
+     <SCRIPT language="javascript">
+        const url = new URL(this.location);
+     
+        // URLSearchParams 객체
+        const urlParams = url.searchParams;
+     
+        // URLSearchParams.get()
+        var msg1   = urlParams.get('msg1') ; 
+        var msg2   = urlParams.get('msg2') ; 
+
+
+        document.getElementById("idMsg11").innerHTML = msg1;
+        document.getElementById("idMsg12").innerHTML = msg1;
+
+        document.getElementById("idMsg21").innerHTML = msg2;        
+        document.getElementById("idMsg22").innerHTML = msg2;    
+        document.getElementById("idMsg23").innerHTML = msg2;    
+      
+     </SCRIPT> 
+     <footer style="margin-top:600px ;">
+      <hr>
+      <div style="text-align: center;">
+         <b style="font-size: large;">      
+            CREDIT<br><br>
+         </b>   
+         <b >제공/배급</b> 김헵시바, 박하<br>
+         <b>특별 출연/스폰서</b> to do list 
+      </div>>
+     </footer>
+   </body>
+</html>

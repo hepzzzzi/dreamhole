@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8"> 
+      <style>
+         .csMsg {
+            border:0px ;
+            border-bottom:1px solid black;
+            width : 250px;
+         }
+      </style>
+      <script>
+           function openPopup1() {
+               var idPopup1 = document.getElementById('idPopup1');
+               idPopup1.style.display = "block";
+           }
+           
+           function closePopup1() {
+               var idPopup1 = document.getElementById('idPopup1');
+               var idMsg1   = document.getElementById('idMsg1');
+               var idText1  = document.getElementById('idText1'); 
+
+               idMsg1.value          =  idText1.value;
+               idPopup1.style.display = "none";
+           }
+           function sendText1(text) {
+               var idText1 = document.getElementById("idText1")
+               idText1.value = text;
+           }
+
+
+           function openPopup2() {
+               var idPopup2 = document.getElementById('idPopup2');
+               idPopup2.style.display = "";
+           }
+           
+           function closePopup2() {
+               var idPopup2 = document.getElementById('idPopup2');
+               var idMsg2   = document.getElementById('idMsg2');
+               var idText2  = document.getElementById('idText2'); 
+
+               idMsg2.value          =  idText2.value;                     //레이어 팝업2 글자를 바탕으로 보내기 
+               idPopup2.style.display = "none";                            //레이어 팝업2 없애기(닫기)
+           }
+           function sendText2(text) {
+               var idText2 = document.getElementById("idText2")
+               idText2.value = text;
+           }
+
+
+      </script>
+   </head>
+   <body>
+        <div id = "idPopup1"
+             style="position:absolute; top: 400px; left:500px; border:1px solid blue; width:400px;display:none; border-radius: 10px 10px;">           <!-- 레이어 팝업 -->
+             <a style="cursor:pointer;" onclick="closePopup1()">[닫기]</a>
+             당신의 오늘 먼지 털어줄 사물은?<Br>
+
+            <input type       = "text"   
+                   name       = "text1" 
+                   id         = "idText1"
+                   value      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup1()"
+                   class      = "csMsg"> 먼지털기 <BR>
+
+            <IMG src="/xxx.jpg"  onclick="sendText1('폭발하듯이 자라는 보스턴 고사리')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText1('폭발하듯이 자라는 보스턴 고사리2')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText1('폭발하듯이 자라는 보스턴 고사3리')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText1('폭발하듯이 자라는 보스턴 고사4리')"> 
+        </div>
+
+
+
+
+
+
+        <div id = "idPopup2"
+             style="position:absolute; top: 400px; left:500px; border:1px solid green; width:400px;display:none;">            <!-- 레이어 팝업 -->
+             <a style="cursor:pointer;" onclick="closePopup2()">[닫기]</a>
+             당신의 오늘 먼지 털어줄 사물은?<Br>
+
+            <input type       = "text"   
+                   name       = "text2" 
+                   id         = "idText2"
+                   value      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup2()"
+                   class      = "csMsg"> 먼지털기 <BR>
+
+            <IMG src="/xxx.jpg"  onclick="sendText2('존레논1')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText2('존레논2')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText2('존레논3')"> 
+            <IMG src="/xxx.jpg"  onclick="sendText2('존레논4')"> 
+        </div>
+
+        <form name="formName" method="get" action="꿈의화이트홀.html">         <!-- form 정보 물고가기 -->
+            <input type       = "text"   
+                   name       = "msg1" 
+                   id         = "idMsg1"
+                   vlaue      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup1()"
+                   class      = "csMsg"> 먼지털기 <BR>
+
+            <input type       = "text"   
+                   name       = "msg2" 
+                   id         = "idMsg2"
+                   vlaue      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup2()"
+                   class      = "csMsg"> 에게 연락하기 <BR>
+
+            <input type       = "text"   
+                   name       = "msg3" 
+                   id         = "idMsg3"
+                   vlaue      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup3()"
+                   class      = "csMsg">연습하기 <BR>   
+
+                  <BR>
+                  <BR>
+                  <BR>
+                  <BR>            
+                  <BR>
+                  <BR>
+                  <a style="cursor:pointer;" onclick="document.formName.submit()"><img src="">블랙홀이미지</a>
+        </form>
+ 
+   </body>
+</html> 

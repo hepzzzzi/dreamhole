@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/afp5acb.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400&display=swap" rel="stylesheet">
+	<title>화이트홀의 몸짓들</title>
+	<script>
+			function openPopup1() {
+               var idPopup1 = document.getElementById('idPopup1');
+               idPopup1.style.display = "block";
+           }
+           
+           function closePopup1() {
+               var idPopup1 = document.getElementById('idPopup1');
+               var idMsg1   = document.getElementById('idMsg1');
+               var idText1  = document.getElementById('idText1'); 
+
+               idMsg1.value          =  idText1.value;
+               idPopup1.style.display = "none";
+           }
+           function sendText1(text) {
+               var idText1 = document.getElementById("idText1")
+               idText1.value = text;
+           }
+
+
+           function openPopup2() {
+               var idPopup2 = document.getElementById('idPopup2');
+               idPopup2.style.display = "";
+           }
+           
+           function closePopup2() {
+               var idPopup2 = document.getElementById('idPopup2');
+               var idMsg2   = document.getElementById('idMsg2');
+               var idText2  = document.getElementById('idText2'); 
+
+               idMsg2.value          =  idText2.value;                     //레이어 팝업2 글자를 바탕으로 보내기 
+               idPopup2.style.display = "none";                            //레이어 팝업 2 없애기(닫기)
+           }
+           function sendText2(text) {
+               var idText2 = document.getElementById("idText2")
+               idText2.value = text;
+           }
+    </script>
+</head>
+<body>
+	<div id="wrap">
+		<div id = "idPopup1"
+             style="position:absolute; top: 100px; left:500px; border:1px solid blue; padding: 10px;
+             	width:640px;display:none; border-radius: 10px">           <!-- 레이어 팝업 -->
+             <a style="cursor:pointer;" onclick="closePopup1()">[닫기]</a><br>
+             당신이 오늘 먼지 털어줄 사물은?<Br>
+
+            <input type       = "text"   
+                   name       = "text1" 
+                   id         = "idText1"
+                   value      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup1()"
+                   class      = "csMsg"> 먼지 털기 <BR><BR>
+
+            <IMG src="img/option 1-1.png" width="100px" onclick="sendText1('폭발하듯이 자라는 보스턴 고사리')"> 
+            <IMG src="img/option 1-1-2.png" width="100px" onclick="sendText1('교양시간에 만든 향꽂이')"> 
+            <IMG src="img/option 1-1-4.png" width="100px" onclick="sendText1('따뜻하며 관능적인 벽돌색 차렵이불')"> 
+            <IMG src="img/option 1-1-6.png" width="100px" onclick="sendText1('찹쌀떡 같이 쫀득한 바디필로우')"> 
+        </div>
+
+
+        <div id = "idPopup2"
+             style="position:absolute; top: 300px; left:500px; border:1px solid green; padding: 10px; width:640px;display:none; border-radius:10px;">            <!-- 레이어 팝업 -->
+             <a style="cursor:pointer;" onclick="closePopup2()">[닫기]</a><br>
+             당신이 오늘 연락할 이는?<Br>
+
+            <input type       = "text"   
+                   name       = "text2" 
+                   id         = "idText2"
+                   value      = "" 
+                   title      = "고르거나 직접입력하세요"  
+                   placeholder= "고르거나 직접입력하세요"
+                   onclick    = "openPopup2()"
+                   class      = "csMsg"> 에게 연락하기 <BR><BR>
+
+
+	         <IMG src="img/option 1-1-1.png" width="100px" onclick="sendText2('본가에 두고 온 강아지 로로')"> 
+	         <IMG src="img/option 1-1-3.png" width="100px" onclick="sendText2('존 레논')"> 
+	         <IMG src="img/option 1-1-5.png" width="100px" onclick="sendText2('나에게 F를 준 교수님')"> 
+	         <IMG src="img/option 1-1-7.png" width="100px" onclick="sendText2('잠수이별한 전애인')"> 
+
+        </div>
+
+        <div id="content">
+        	<div id="title">
+				To-do List
+			</div>
+			
+			<form name="formName" method="get" action="꿈의화이트홀.html">
+				<div id="todo">
+					<input type="checkbox" id="cbMsg1" value=""><label for="cbMsg1"></label>
+					<input type = "text"   
+			                   name       = "msg1" 
+			                   id         = "idMsg1"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup1()"
+			                   class      = "csMsg"> 먼지 털기 <br>
+
+
+					<input type="checkbox" id="cbMsg2" value=""><label for="cbMsg2"></label>
+					<input type       = "text"   
+			                   name       = "msg2" 
+			                   id         = "idMsg2"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup2()"
+			                   class      = "csMsg"> 에게 연락하기 <br>
+
+					<input type="checkbox" id="cbMsg3" value=""><label for="cbMsg3"></label>
+					<input type       = "text"   
+			                   name       = "msg3" 
+			                   id         = "idMsg3"
+			                   vlaue      = "" 
+			                   title      = "몸짓을 고르시오"  
+			                   placeholder= "몸짓을 고르시오"
+			                   onclick    = "openPopup3()"
+			                   class      = "csMsg"> 연습하기 <br>
+
+					<input type="checkbox" id="cbMsg4" value=""><label for="cbMsg4"></label> &nbsp쌓인
+					<input type       = "text"   
+			                   name       = "msg4" 
+			                   id         = "idMsg4"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup4()"
+			                   class      = "csMsg"> 치우기 <br>
+
+					<input type="checkbox" id="cbMsg5" value=""><label for="cbMsg5"></label> &nbsp친구에게
+					<input type       = "text"   
+			                   name       = "msg5" 
+			                   id         = "idMsg5"
+			                   vlaue      = "" 
+			                   title      = "몸짓을 고르시오"  
+			                   placeholder= "몸짓을 고르시오"
+			                   onclick    = "openPopup5()"
+			                   class      = "csMsg"> <br>
+					
+					<input type="checkbox" id="cbMsg6" value=""><label for="cbMsg6"></label>
+					<input type       = "text"   
+			                   name       = "msg6" 
+			                   id         = "idMsg6"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup6()"
+			                   class      = "csMsg"> 한 잔 마시기 <br>
+
+					<input type="checkbox" id="cbMsg7" value=""><label for="cbMsg7"></label>
+					<input type       = "text"   
+			                   name       = "msg7" 
+			                   id         = "idMsg7"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup7()"
+			                   class      = "csMsg"> 햇볕에 말리기 <br>
+
+					<input type="checkbox" id="cbMsg8" value=""><label for="cbMsg8"></label> &nbsp떨어진
+					<input type       = "text"   
+			                   name       = "msg8" 
+			                   id         = "idMsg8"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup8()"
+			                   class      = "csMsg"> 채우기 <br>
+
+					<input type="checkbox" id="cbMsg9" value=""><label for="cbMsg9"> </label>
+					<input type       = "text"   
+			                   name       = "msg9" 
+			                   id         = "idMsg9"
+			                   vlaue      = "" 
+			                   title      = "대상을 고르시오"  
+			                   placeholder= "대상을 고르시오"
+			                   onclick    = "openPopup9()"
+			                   class      = "csMsg"> 세탁하기 <br>
+
+					<input type="checkbox" id="cbMsg10" value=""><label for="cbMsg10"></label>
+					<input type       = "text"   
+			                   name       = "msg10" 
+			                   id         = "idMsg10"
+			                   vlaue      = "" 
+			                   title      = "몸짓을 고르시오"  
+			                   placeholder= "몸짓을 고르시오"
+			                   onclick    = "openPopup10()"
+			                   class      = "csMsg">을(를) 위한 공간 만들기 <br>
+			    </div>
+				<div id="down">
+					잠들기<br>
+					<img src="img/arrow.svg" width=60px>
+				</div>
+
+				<div id="enter">
+					<a style="cursor:pointer;" onclick="document.formName.submit()">입장하기</a>
+				</div>
+
+				<div class="container">
+					<img src="img/blackhole.png" class="rotate">
+				</div>
+			</form>
+		
+		</div>
+	</div>
+</body>
+</html>
